@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desktop - Register Page</title>
+    <style>
+        /* General body styling */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0d1b2a;
+            color: #ffffff;
+        }
+
+        /* Header styling */
+        .header {
+            background-color: #1b3a4b;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header img {
+            height: 50px;
+        }
+
+        .header nav a {
+            color: #ffffff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .header .buttons a {
+            background-color: #1b3a4b;
+            border: 1px solid #ffffff;
+            border-radius: 5px;
+            padding: 5px 10px;
+            margin-left: 10px;
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        /* Main content styling */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: calc(100vh - 160px);
+        }
+
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        .register-form {
+            background-color: #1b3a4b;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+        }
+
+        .register-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .register-form input[type="text"],
+        .register-form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #0d1b2a;
+            color: #ffffff;
+        }
+
+        .register-form input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .register-form .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .register-form .buttons button {
+            background-color: #1b3a4b;
+            border: 1px solid #ffffff;
+            border-radius: 5px;
+            padding: 10px;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        /* Footer styling */
+        .footer {
+            background-color: #1b3a4b;
+            padding: 10px 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header section -->
+    <div class="header">
+        <img src="logo.png" alt="Logo">
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">Planos</a>
+            <a href="#">Pagamentos</a>
+        </nav>
+        <div class="buttons">
+            <a href="#">Entrar</a>
+            <a href="#">Registrar</a>
+        </div>
+    </div>
+
+    <!-- Main content section -->
+    <div class="main-content">
+        <div class="logo">
+            <img src="logo-large.png" alt="Logo">
+        </div>
+        <div class="register-form">
+            <label for="phone">Telefone</label>
+            <input type="text" id="phone" placeholder="(xx) xxxxx-xxxx">
+            
+            <label for="email">Email</label>
+            <input type="text" id="email" placeholder="example123@dominio.com">
+            
+            <label for="password">Senha</label>
+            <input type="password" id="password" placeholder="Password">
+            
+            <label for="repeat-password">Repita a senha</label>
+            <input type="password" id="repeat-password" placeholder="Password">
+            
+            <div>
+                <input type="checkbox" id="terms">
+                <label for="terms">Concordo com os Termos</label>
+            </div>
+            
+            <div class="buttons">
+                <button>Já tenho conta</button>
+                <button>Cadastrar-se</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer section -->
+    <div class="footer">
+        <p>Torres Net</p>
+        <p>12.345.678/0001-00</p>
+    </div>
+</body>
+</html>
