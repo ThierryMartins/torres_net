@@ -22,6 +22,8 @@
 .nav-links {
     display: flex;
     gap: 20px;
+    text-align: center; /*alterado vitor araujo*/
+    align-items: center; /*alterado vitor araujo*/
 }
 
 .nav-links a {
@@ -36,6 +38,10 @@
     border-radius: 5px;
 }
 
+.nav-links .button:hover {
+    background-color: rgba(128, 128, 128, 0.08);
+} /*alterado/adicionado vitor araujo*/
+
 /* Main content styling */
 .main-content {
     display: flex;
@@ -43,18 +49,22 @@
     align-items: center;
     justify-content: center;
     height: calc(100vh - 160px);
-    margin-bottom: 29%;
+    margin-bottom: 100px; /*alterado vitor araujo*/
 }
 
 
 
 .logo {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
+    width: 250px; /*alterado vitor araujo*/
+    height: 250px; /*alterado vitor araujo*/
+    align-items: center; /*alterado vitor araujo*/
+    margin-top: 60px; /*alterado vitor araujo*/
 }
 
 .login-box {
     background-color: #1b6ca8;
-    padding: 20px;
+    padding: 40px;
     border-radius: 10px;
     width: 300px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -67,7 +77,7 @@
 }
 
 .login-box input {
-    width: 100%;
+    width: 95%; /*alterado vitor araujo*/
     padding: 10px;
     margin-bottom: 15px;
     border: none;
@@ -89,6 +99,10 @@
     border-radius: 5px;
     cursor: pointer;
 }
+
+.login-box .buttons button:hover {
+   background-color: rgba(128, 128, 128, 0.08);
+} /*alterado/adicionado vitor araujo*/
 
 .login-box a {
     color: #ffffff;
