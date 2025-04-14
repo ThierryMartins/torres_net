@@ -7,7 +7,7 @@
 }
 
 /* Header styling */
-.header {
+.menu {
     background-color: #1b3a4b;
     padding: 10px 20px;
     display: flex;
@@ -15,8 +15,8 @@
     align-items: center;
 }
 
-.header img {
-    height: 50px;
+.menu img {
+    width:100px;
 }
 
 .nav-links {
@@ -43,7 +43,10 @@
     align-items: center;
     justify-content: center;
     height: calc(100vh - 160px);
+    margin-bottom: 29%;
 }
+
+
 
 .logo {
     margin-bottom: 20px;
@@ -119,6 +122,99 @@
     height: 20px;
 }
 
-@media (max-width:428){
+#menu-toggle {
+    display: none; /* Esconde o botão hambúrguer no desktop */
+  }
+
+@media (max-width: 438px) {
+
+    .main-content img{
+        width: 70%;
+    }
+
+    .menu-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    position: absolute;
+    top: 1.8rem;
+    right: 5%;
+    z-index: 3;
+    cursor: pointer;
+    }
+    
+    .nav-links{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hamburger-line {
+    height: 4px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    }
+    
+    /* Estilo do menu */
+    .menu {
+    position: fixed;
+    top: 0;
+    left: -120%;
+    width: 100%;
+    height: 100vh;
+    background: #0a4a5b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: left 0.3s ease;
+    z-index: 2;
+    gap: 2rem;
+    padding-top: 80px;
+    }
+    
+    .menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    }
+    .menu-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    }
+   
+    .menu img{
+        margin-bottom: 100%;
+        width: 50%;
+    }
+
+    /* Quando o checkbox estiver marcado, mostrar o menu */
+    #menu-toggle:checked ~ .menu {
+    left: 0;
+    }
+    
+    /* Transformar hamburger em X quando menu aberto */
+    #menu-toggle:checked ~ .menu-btn .hamburger-line:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+    }
+    
+    #menu-toggle:checked ~ .menu-btn .hamburger-line:nth-child(2) {
+    opacity: 0;
+    }
+    
+    #menu-toggle:checked ~ .menu-btn .hamburger-line:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+    }
     
 }
