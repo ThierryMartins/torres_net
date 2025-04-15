@@ -20,15 +20,15 @@
         </label>
         <div class="menu">
             <img src="image/logo.png" alt="Logo">
-        <nav>
-            <a href="#">Início</a>
-            <a href="#">Planos</a>
-            <a href="#">Pagamentos</a>
-        </nav>
-        <div class="buttons">
-            <a href="#">Entrar</a>
-            <a href="#">Registrar</a>
-        </div>
+            <nav class="nav-links">
+                <a href="#">Início</a>
+                <a href="#">Planos</a>
+                <a href="#">Pagamentos</a>
+                <div class="buttons">
+                    <a href="#" style="align-self: flex-start;">Entrar</a>
+                    <a href="#" style="align-self: flex-end;">Registrar</a>
+                </div>
+            </nav>
         </div>
         
     </header>
@@ -51,7 +51,7 @@
             <label for="repeat-password">Repita a senha</label>
             <input type="password" id="repeat-password" placeholder="Repita a senha">
             
-            <div>
+            <div class="checkbox-termos">
                 <input type="checkbox" id="terms">
                 <label for="terms">Concordo com os Termos</label>
             </div>
