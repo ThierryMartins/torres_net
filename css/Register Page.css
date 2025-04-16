@@ -20,7 +20,6 @@
 
 .nav-links {
     display: flex;
-    gap: 20px;
     text-align: center;
     align-items: center;
 }
@@ -143,11 +142,6 @@
 #menu-toggle {
     display: none; /* Esconde o botão hambúrguer no desktop */
   }
-
-  .menu img{
-    display: none;
-    width: 100px;
-  }
   
   .button-acessibilidade{
    position: fixed;
@@ -229,6 +223,10 @@
         padding-right: 0px;
     }
 
+    .register-form #name {
+        width: 80%;
+    }
+
     .register-form #email {
         width: 80%;
     }
@@ -279,9 +277,7 @@
         /* Estilo do menu */
 
         .menu {
-            display: none;
-            /*o codigo abaixo é desnecessario para a responsividade*/
-            /* position: fixed;
+            position: fixed;
             top: 0;
             left: -130%;
             width: 100%;
@@ -294,7 +290,7 @@
             z-index: 2;
             gap: 2rem;
             padding-top: 80px;
-            margin-top: -50%; */
+            margin-top: -50%;
         } 
         nav{
             display: flex;
@@ -412,6 +408,7 @@
   
   /* Media Queries para telas maiores */
   @media (min-width: 768px) {
+
     .menu-acessibilidade {
       width: 250px;
       left: 0;
@@ -428,4 +425,3 @@
       transform: translateY(-50%);
     }
   }
-  
