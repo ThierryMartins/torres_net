@@ -1,4 +1,7 @@
  /* Body styling */
+
+
+
  body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -102,12 +105,81 @@ footer {
 }
 
 
+.menu img{
+  display: none;
+  width: 100px;
+}
+
+.button-acessibilidade{
+ position: fixed;
+ right: 20px;
+ z-index: 4;
+ cursor: pointer;
+}
+
+.button-acessibilidade img {
+  width: 60px;
+  height: 60px;
+}
+
+.menu-acessibilidade{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  z-index: 3;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+  height: 25vh;
+  width: 15%;
+  align-items: center;
+  left: -40%;
+  text-align: center;
+/* Posição inicial (fora da tela) */
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 300ms ease, transform 300ms ease;
+  pointer-events: none;
+  border: 2px solid #1964c7;
+}
+
+.menu-acessibilidade.ativo{
+  opacity: 1;
+  transform: translateX(40px);
+  pointer-events: auto;
+}
+
+.menu-acessibilidade button{
+  display: block;
+  background: none;
+  border: none;
+  color: black;
+  margin: 10px auto;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.menu-acessibilidade h3{
+  color: black;
+}
+
+.menu-acessibilidade button:hover{
+  text-decoration: underline;
+}
 
 /* Estilo Mobile */
-@media (max-width: 438px) {
+@media (max-width: 480px) {
 /* Logo styling */
 .logo {
   height: 90px;
+}
+
+.menu img{
+  display: block;
+ 
 }
 
 .menu-btn {
@@ -181,11 +253,100 @@ opacity: 0;
 transform: translateY(-9px) rotate(-45deg);
 }
 
-
-
   .logo-large{
       width: 70%;
   }
 
 
+  /* Menu de Acessibilidade */
+.button-acessibilidade {
+  position: fixed;
+  z-index: 1000;
+  cursor: pointer;
 }
+
+.button-acessibilidade img {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.button-acessibilidade:hover img {
+  transform: scale(1.1);
+}
+
+.menu-acessibilidade {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  z-index: 999;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  height: auto; /* Altura automática */
+  max-height: 70vh; /* Limite máximo */
+  width: 90%; /* Largura maior em mobile */
+  max-width: 300px; /* Largura máxima em desktop */
+  align-items: center;
+  left: 0;
+  top: 50%;
+  transform: translate(-100%, -100%); /* Centraliza verticalmente e esconde */
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  pointer-events: none;
+  overflow-y: auto; /* Scroll se necessário */
+}
+
+.menu-acessibilidade.ativo {
+  transform: translate(10px, -30%); /* Aparece à direita */
+  opacity: 1;
+  pointer-events: auto;
+}
+/* Botões do menu */
+.menu-acessibilidade button {
+  background: none;
+  border: none;
+  color: black;
+  margin: 10px 0;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.menu-acessibilidade button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Título do menu */
+.menu-acessibilidade h3 {
+  color: black;
+  margin-bottom: 15px;
+  font-size: 18px;
+  text-align: center;
+}
+
+}
+
+/* Media Queries para telas maiores */
+@media (min-width: 768px) {
+  .menu-acessibilidade {
+    width: 250px;
+    left: 0;
+    transform: translate(-100%, -50%);
+    top: 30%;
+  }
+  
+  .menu-acessibilidade.ativo {
+    transform: translate(40px, -50%);
+  }
+  
+  .button-acessibilidade {
+    bottom: auto;
+    transform: translateY(-50%);
+  }
+}
+
