@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desktop - Register Page</title>
     <link rel="stylesheet" href="css/Register Page.css">
 </head>
+
 <body>
     <!-- Header section -->
     <header class="header">
-        
+
         <input type="checkbox" id="menu-toggle">
-    
+
         <!-- Label que servirá como botão do menu hamburger -->
         <label for="menu-toggle" class="menu-btn">
             <span class="hamburger-line"></span>
@@ -26,11 +28,12 @@
                 <a href="https://sejaefi.com.br/efi-pay#gestao-de-cobrancas">Pagamentos</a>
                 <div class="buttons">
                     <a href="Login-Page.html" style="align-self: flex-start;">Entrar</a>
-                    <a href="Register-Page." style="align-self: flex-end;">Registrar</a>
+                    <a href="Register-Page.html" style="align-self: flex-end;">Registrar</a>
+
                 </div>
             </nav>
         </div>
-        
+
     </header>
 
     <!-- Main content section -->
@@ -53,23 +56,31 @@
             <img src="image/logo-large.png" alt="Logo">
         </div>
         <div class="register-form">
+            <label for="name">Nome Completo</label>
+            <input type="text" id="name" placeholder="Seu nome completo">
+            <div id="name-error" class="error-message"></div>
+
             <label for="phone">Telefone</label>
             <input type="text" id="phone" placeholder="(xx) xxxxx-xxxx">
-            
+            <div id="phone-error" class="error-message"></div>
+
             <label for="email">Email</label>
             <input type="text" id="email" placeholder="example123@dominio.com">
-            
+            <div id="email-error" class="error-message"></div>
+
             <label for="password">Senha</label>
             <input type="password" id="password" placeholder="Senha">
-            
+            <div id="password-error" class="error-message"></div>
+
             <label for="repeat-password">Repita a senha</label>
             <input type="password" id="repeat-password" placeholder="Repita a senha">
+            <div id="repeat-password-error" class="error-message"></div>
             
             <div class="checkbox-termos">
                 <input type="checkbox" id="terms">
                 <label for="terms">Concordo com os Termos</label>
             </div>
-            
+
             <div class="buttons">
                 <button>Já tenho conta</button>
                 <button>Cadastrar-se</button>
@@ -83,6 +94,7 @@
         <p>12.345.678/0001-00</p>
     </div>
 </body>
-<script src="src/register.js"></script>
+<script src="src/register.js" type="module"></script>
 <script src="src/acessibilidade.js"></script>
 </html>
+

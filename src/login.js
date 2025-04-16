@@ -1,39 +1,45 @@
-// usuário para testar a entrada
-let usuarioTeste = {email: "fulano@gmail.com", senha: "123123"}
+import { loginUser, checkLoggedIn, redirectIfLoggedIn, getLoggedInUser } from './auth.js';
 
-// "pega" os botões de cadastre-se e entrar e os coloca em uma variável
-let divBotoes = document.getElementsByClassName("buttons")[0]
-let cadastrese = divBotoes.getElementsByTagName("button")[0]
-let entrar = divBotoes.getElementsByTagName("button")[1]
-
-// fazer com que o botão "cadastre-se" redirecione para a página de cadastro
-cadastrese.addEventListener("click", () => {
-    alert("Redirecionando para a página de cadastro...")
-    window.location.href = '/Register-page.html'
-})
-
-entrar.addEventListener("click", () => {
-    // associa o email e a senha à uma variável
-    let divLogin = document.getElementsByClassName("login-box")[0]
-    let email = divLogin.getElementsByTagName("input")[0].value
-    let senha = divLogin.getElementsByTagName("input")[1].value
-
+// Verifica login ao carregar a página
+document.addEventListener('DOMContentLoaded', () => {
+    // Redireciona se já estiver logado
+    redirectIfLoggedIn();
     
-    if(email != usuarioTeste.email) { // verifica se o email existe
-        alert("Email não existente nos registros")
-    }else if(senha != usuarioTeste.senha) { // verifica se a senha está correta
-        alert("Senha incorreta")
-    }else { // mensagem de sucesso
-        alert(`Bem vindo usuário do email: ${email}`)
+    // Mostra mensagem se veio do cadastro
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('registered')) {
+        alert('Cadastro realizado com sucesso! Faça login para continuar.');
     }
-})
+});
 
-// variável para o botão "esqueci a senha"
-let divLogin = document.getElementsByClassName("login-box")[0]
-let esqueciASenha = divLogin.getElementsByTagName("a")[0]
 
-// fazer com que o hyperlink "Esqueceu a senha?" redirecione para a página de recuperar a senha
-esqueciASenha.addEventListener("click", () => {
-    alert("Redirecionando para a página de recuperar senha...")
-    window.location.href = '/Forgort-Password.html'
-})
+// Selecionar elementos
+const emailInput = document.getElementById('email');
+const passwordInput = document.getElementById('password');
+const loginButton = document.querySelector('.buttons button:last-child');
+const registerButton = document.querySelector('.buttons button:first-child');
+const forgotPasswordLink = document.querySelector('.login-box a');
+
+// Event listeners
+registerButton.addEventListener('click', () => {
+    window.location.href = 'Register-Page.html';
+});
+
+loginButton.addEventListener('click', () => {
+    try {
+        const email = emailInput.value.trim();
+        const password = passwordInput.value;
+
+        loginUser(email, password);
+        alert('Login realizado com sucesso!');
+        window.location.href = 'index.html';
+        
+    } catch (error) {
+        alert(error.message);
+    }
+});
+
+forgotPasswordLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.location.href = 'Forgort-Password.html';
+});
