@@ -54,8 +54,8 @@
     align-items: center;
     justify-content: center;
     height: calc(100vh - 160px);
-    margin-top: 80px;
-    margin-bottom: 180px;
+    margin-top: 280px;
+    margin-bottom: 300px;
 }
 
 .logo {
@@ -144,11 +144,11 @@
   }
   
   .button-acessibilidade{
-   position: fixed;
-   right: 10px;
-   margin-top: -60%;
-   z-index: 4;
-   cursor: pointer;
+    position: fixed;
+    right: 20px;
+    top: 20%;
+    z-index: 4;
+    cursor: pointer;
    
   }
   
@@ -428,3 +428,20 @@
       transform: translateY(-50%);
     }
   }
+
+/*media quary para tela ainda maior*/
+@media (min-width:1200px) {
+  body {
+    font-size: 25px;
+  }
+
+  .register-form #name, .register-form #email, .register-form #phone,
+  .register-form #password, .register-form #repeat-password {
+    height: 25px;
+    width: 290px;
+  }
+
+  .register-form > input::placeholder, .register-form .buttons button {
+    font-size: 20px;
+  }
+}
