@@ -7,6 +7,7 @@
     <title>TorresNet</title>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -19,6 +20,7 @@
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
             </label>
+
             <div class="menu">
                 <img src="image/logo.png" alt="Logo">
                 <nav class="nav-links">
@@ -31,15 +33,29 @@
                     </div>
                 </nav>
             </div>
-    </header>
+        </header>
 
 
     <!-- Main content section -->
     <section class="img-familia">
         <img src="/image/banner.png" alt=banner com imagem de uma familia feliz com internet>
-    </section><!----> <!-- <div>
+    <div id="escala-mobile">
+        <div class="button-acessibilidade" id="btn-acessibilidade">
+            <img id="teste" src="image/icons8-acessibilidade-40.png" alt="Botão de Acessibilidade">
+        </div>
+    </div>
+
+        <div class="menu-acessibilidade" id="menu-acessibilidade">
+            <h3>Ferramentas de Acessibilidade</h3>
+            <button><i class="fa-regular fa-moon"></i> Tema Escuro</button>
+            <button><i class="fa-solid fa-circle-half-stroke"></i>  Alto Contraste</button>
+            <button><i class="fas fa-font"></i>  Aumentar Texto</button>
+            <button><i class="fas fa-link"></i>  Links Sublinhados</button>
+        </div>
+    
+    </section>
             
-        </div> -->
+         
 
     <section class="principal"><!--class="home"-->
         <div id="quem-somos">
@@ -79,7 +95,7 @@
 
     </footer>
 
-    <script type="module">
+    <!-- <script type="module">
         import { getLoggedInUser } from './src/auth.js';
         
         document.addEventListener('DOMContentLoaded', () => {
@@ -106,9 +122,9 @@
                 }
             }
         });
-    </script>
-
-
+    </script> -->
+    <script src="src/index.js"></script>
+    <script src="src/acessibilidade.js"></script>
 </body>
 
 </html>
