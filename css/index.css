@@ -389,9 +389,6 @@ footer a {
   
   }
   
-
-  
-
 @media (max-width: 820px) {
     * {
         margin: 0;
@@ -406,6 +403,27 @@ footer a {
     .principal {
         display: grid;
         width: 623px;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (min-width: 1400px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+    .img-familia img {
+        margin-top: 40px;
+        width: 1550px;
+        margin-bottom: 40px;
+    }     
+    .principal {
+        display: grid;
+        width: 1300px;
+        height: 550px;
         align-items: center;
         text-align: center;
     }
