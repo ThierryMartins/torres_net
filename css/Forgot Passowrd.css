@@ -59,6 +59,11 @@ list-style-type: none;
   border-radius: 5px;
 }
 
+
+.button:hover {
+  background-color: rgb(20, 82, 175);
+} /*alterado/adicionado vitor araujo*/
+
 /* Main content styling */
 .content {
   text-align: center;
