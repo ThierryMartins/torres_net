@@ -408,7 +408,7 @@ footer a {
     }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 768px) {
     * {
         margin: 0;
         padding: 0;
@@ -417,15 +417,16 @@ footer a {
     }
     .img-familia img {
         margin-top: 40px;
-        width: 1550px;
+        width: 1310px;
         margin-bottom: 40px;
     }     
     .principal {
         display: grid;
         width: 1300px;
-        height: 550px;
+        height: 500px;
         align-items: center;
         text-align: center;
+        margin-bottom: 20px;
     }
 }
 
