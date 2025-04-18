@@ -56,15 +56,6 @@ body {
     background-color: rgba(128, 128, 128, 0.08);
 }
 
-/*Main content section*/
-/* .img-familia {
-    background-image: url('/image/banner.png'); /* Caminho da imagem 
-    background-size: cover;   
-    background-position: center; 
-    background-repeat: no-repeat;
-    height: 150vh;               
-    width: 100%;  
-}*/
 
 .img-familia img {
     width: 1264.8px;
@@ -209,6 +200,12 @@ footer a {
     display: none; /* Esconde o botão hambúrguer no desktop */
   }
   
+  #escala .button-acessibilidade img {
+    width: 60px;
+    height: 60px;
+     transition: transform 0.3s ease;
+   }
+ 
 
 @media (max-width: 480px) {
     
@@ -321,7 +318,7 @@ footer a {
     cursor: pointer;
   }
   
-  #escala-mobile .button-acessibilidade img {
+  #escala .button-acessibilidade img {
    width: 60px;
    height: 60px;
     transition: transform 0.3s ease;
@@ -415,11 +412,12 @@ footer a {
         box-sizing: border-box;
         overflow-x: hidden;
     }
-    .img-familia img {
+    .img-familia #familia {
         margin-top: 40px;
-        width: 1310px;
+        width: 100%;
         margin-bottom: 40px;
-    }     
+    } 
+    
     .principal {
         display: grid;
         width: 1300px;
@@ -427,6 +425,49 @@ footer a {
         align-items: center;
         text-align: center;
         margin-bottom: 20px;
+    }
+
+    .menu-acessibilidade{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: fixed;
+        background-color: #fff;
+        padding: 15px;
+        border-radius: 8px;
+        z-index: 3;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+        height: 20vh;
+        top: 20%;
+        width: 15%;
+        align-items: center;
+        left: -40%;
+        text-align: center;
+      /* Posição inicial (fora da tela) */
+        opacity: 0;
+        transform: translateX(-100%);
+        transition: opacity 300ms ease, transform 300ms ease;
+        pointer-events: none;
+        border: 2px solid #1964c7;
+      }
+}
+
+@media(min-width: 1200px){
+    .img-familia #familia {
+        margin-top: 40px;
+        width: 100%;
+        margin-bottom: 40px;
+       
+    }     
+    .principal  {
+        display: grid;
+        width: 1300px;
+        height: 500px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        margin-left: 25%;
     }
 }
 
