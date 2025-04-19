@@ -1,5 +1,9 @@
  /* Body styling */
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 
  body {
@@ -46,7 +50,7 @@ list-style-type: none;
 
 /* Button styling */
 .button {
-  background-color: #0b1b2b;
+  background-color: #1b6ca8;
   border: none;
   color: white;
   padding: 10px 20px;
@@ -61,7 +65,7 @@ list-style-type: none;
 
 
 .button:hover {
-  background-color: rgb(20, 82, 175);
+  background-color: rgba(128, 128, 128, 0.08);
 } /*alterado/adicionado vitor araujo*/
 
 /* Main content styling */
@@ -77,6 +81,7 @@ list-style-type: none;
   border-radius: 10px;
   width: 300px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-left: 15px;
 }
 
 /* Input styling */
@@ -90,19 +95,22 @@ input[type="email"] {
 }
 
 /* Footer styling */
-footer {
+.footer {
   width: 100%;
   background-color: #0a4a5b;
   padding: 10px 20px;
-  position: absolute;
+  /* position: absolute; */
   bottom: 0;
   text-align: center;
+  border: hidden;
+  margin-top: 25px;
 }
 
 /* Estilo base (desktop) */
 .menu {
   display: flex;
   gap: 1rem;
+  align-items: center;
 }
 
 #menu-toggle {
@@ -187,7 +195,11 @@ footer {
  
 }
 
-
+.form-container {
+  align-items: center;
+  text-align: center;
+  margin-left: 15px;
+}
 
 .menu-btn {
 display: flex;
@@ -336,6 +348,11 @@ transform: translateY(-9px) rotate(-45deg);
   text-align: center;
 }
 
+.footer {
+  border: hidden;
+  margin-top: 100px;
+}
+
 }
 
 /* Media Queries para telas maiores */
@@ -355,7 +372,26 @@ transform: translateY(-9px) rotate(-45deg);
     bottom: auto;
     transform: translateY(-50%);
   }
-}
 
+  .form-container {
+    width: 400px;
+  }
+
+  .form-container .button {
+    margin-top: 25px;
+  }
+
+  #email {
+    margin-top: 25px;
+  }
+
+  .footer {
+    margin-top: 425px;
+  }
+
+  .logo-large {
+    margin-top: 300px;
+  }
+}
 
 

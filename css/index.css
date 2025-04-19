@@ -292,10 +292,17 @@ footer a {
 
     .img-familia img {
         max-width: 400px;
+        margin-bottom: 1px;
     }
 
     .principal {
         max-width: 400px;
+        margin-bottom: 7px;
+    }
+
+    .ajuste {
+        border: hidden;
+        padding: 5px;
     }
 
     footer {
@@ -461,7 +468,7 @@ footer a {
     }     
     .principal  {
         display: grid;
-        width: 1300px;
+        width: 650px;
         height: 500px;
         align-items: center;
         text-align: center;
