@@ -6,6 +6,53 @@
     color: #ffffff;
 }
 
+/* Tema Escuro */
+
+body.dark .menu, body.dark .footer{
+  background-color: #232c35;
+}
+
+body.dark .login-box{
+  background: #232c35;
+  color: white;
+}
+
+body.dark .login-box input{
+  background-color: #fff;
+  border: 2px solid black;
+}
+
+/* Contraste */
+
+body.contraste .menu, body.contraste .footer{
+  background-color: #232c35;
+  color: #f1c40f;
+}
+
+body.contraste .login-box{
+  background: #232c35;
+  color: black;
+  color: #f1c40f;
+}
+
+body.contraste .login-box input{
+  background-color: white;
+}
+
+body.contraste .login-box button, body.contraste .menu li a, body.contraste .menu div a, body.contraste a {
+  color: #f1c40f;
+}
+
+/* Aumentar Tamanho */
+
+body.more-letter .login-box button, body.more-letter .menu li a, body.more-letter .menu div a, body.more-letter .login-box label {
+  font-size: 25px;
+  width: auto;
+  transition: all 300ms ease-in-out;
+  margin: 5px;
+}
+
+
 /* Header styling */
 .menu {
     background-color: #1b3a4b;
@@ -39,8 +86,8 @@
 }
 
 .nav-links .button:hover {
-    background-color: rgba(128, 128, 128, 0.08);
-} /*alterado/adicionado vitor araujo*/
+  background-color: rgba(21, 38, 184, 0.829);
+} 
 
 /* Main content styling */
 .main-content {
@@ -101,8 +148,8 @@
 }
 
 .login-box .buttons button:hover {
-   background-color: rgba(128, 128, 128, 0.08);
-} /*alterado/adicionado vitor araujo*/
+  background-color: rgba(21, 38, 184, 0.829);
+} 
 
 .login-box a {
     color: #ffffff;
@@ -155,7 +202,7 @@
     justify-content: space-between;
     position: fixed;
     background-color: #fff;
-    padding: 15px;
+    
     border-radius: 8px;
     z-index: 3;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
@@ -191,6 +238,7 @@
   
   .menu-acessibilidade h3{
     color: black;
+    font-size: 22px;
   }
   
   .menu-acessibilidade button:hover{

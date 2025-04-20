@@ -65,8 +65,8 @@ list-style-type: none;
 
 
 .button:hover {
-  background-color: rgba(128, 128, 128, 0.08);
-} /*alterado/adicionado vitor araujo*/
+  background-color: rgba(21, 38, 184, 0.829);
+} 
 
 /* Main content styling */
 .content {
@@ -141,7 +141,7 @@ input[type="email"] {
   justify-content: space-between;
   position: fixed;
   background-color: #fff;
-  padding: 15px;
+  padding: -20px;
   border-radius: 8px;
   z-index: 3;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
@@ -177,6 +177,7 @@ input[type="email"] {
 
 .menu-acessibilidade h3{
   color: black;
+  font-size: 22px;
 }
 
 .menu-acessibilidade button:hover{
