@@ -175,6 +175,10 @@ registerButton.addEventListener('click', () => {
         
     } catch (error) {
         console.error('Erro no cadastro:', error.message);
-        // Não mostra alerta genérico aqui, pois os erros já são exibidos nos campos
+
+        // Exibir erro console na tela / Erro final
+        const generalErrorElement = document.getElementById('general-error');
+        generalErrorElement.textContent = `Erro no cadastro: ${error.message}`;
+        generalErrorElement.classList.add('show-error');
     }
 });
