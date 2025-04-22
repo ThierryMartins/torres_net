@@ -345,6 +345,7 @@ footer a+a {
         gap: 10px;
         width: 100%;
         margin-top: 10px;
+        line-height: 40px;
     }
 
     .img-familia img {
@@ -488,6 +489,9 @@ footer a+a {
         transition: opacity 300ms ease, transform 300ms ease;
         pointer-events: none;
         border: 2px solid #1964c7;
+      }
+      .nav-links {
+        gap: 2px;
       }
 }
 
