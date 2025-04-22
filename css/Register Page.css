@@ -191,10 +191,37 @@ body.more-letter .buttons button{
 }
 
 /* Footer styling */
-.footer {
-    background-color: #1b3a4b;
-    padding: 10px 20px;
-    text-align: center;
+footer {
+  background-color: #1b3a4b;
+  padding: 5px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text-footer {
+  text-align: center;
+  align-items: center;
+  color: #fff;
+}
+
+footer img {
+  width: 100px;
+}
+
+footer .social-icons {
+  display: flex;
+  font-size: 50px;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+footer a+a {
+  margin-left: 10px;
 }
 
 #menu-toggle {
