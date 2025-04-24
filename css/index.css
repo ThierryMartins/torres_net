@@ -221,7 +221,7 @@ footer a+a {
     flex-direction: column;
     justify-content: space-between;
     position: fixed;
-    background-color: #fff;
+    background: #1964c7;
     padding: -80px;
     border-radius: 8px;
     z-index: 3;
@@ -471,7 +471,7 @@ footer a+a {
     flex-direction: column;
     justify-content: space-between;
     position: fixed;
-    background-color: #fff;
+    background-color: #1b6ca8;
     padding: 15px;
     border-radius: 8px;
     z-index: 3;
@@ -499,9 +499,8 @@ footer a+a {
   .menu-acessibilidade h3 {
     font-size: 22px;
   }
-
-  .img-container {
-    margin-top: 100px;
+  .img-familia #familia img{
+    width: 100%;
   }
 }
 
@@ -509,7 +508,7 @@ footer a+a {
 @media (min-width: 769px) and (max-width: 1280px) {
   .menu-acessibilidade {
     width: 35%;
-    height: 29vh;
+    height:20%;
     left: 0;
     top: 20%;
     transform: translateX(-100%);

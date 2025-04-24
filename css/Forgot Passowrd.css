@@ -145,9 +145,9 @@ body.more-letter  button {
   text-decoration: none;
 }
 
-.header .menu a:hover{
+/* .header .menu a:hover{
   transform: scale(1.5);
-}
+} */
 
 .header .buttons {
   display: flex;

@@ -472,7 +472,7 @@ footer a+a {
 @media (min-width: 769px) and (max-width: 1280px) {
   .menu-acessibilidade {
     width: 20%;
-    height: 50vh;
+    height: 50%;
     left: 0;
     top: 20%;
     transform: translateX(-100%);
