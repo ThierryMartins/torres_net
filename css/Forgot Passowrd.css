@@ -190,7 +190,7 @@ body.more-letter .plan-card button {
   padding: 40px;
   padding-right: 55px;
   border-radius: 10px;
-  width: 300px;
+  width: 360px;
 }
 
 .container form input[type="email"] {
@@ -205,8 +205,10 @@ body.more-letter .plan-card button {
 
 /* buttons form */
 .reset-form .buttons {
-  display: flex;
-  justify-content: space-between;
+ display: flex;
+ justify-content: center; /* ou center, se preferir */
+ gap: 20px; /* define o espaço entre os botões */
+  
 }
 
 .reset-form .buttons button {
@@ -226,10 +228,11 @@ body.more-letter .plan-card button {
   background-color: #1b6ca8;
 }
 
-.register-form .checkbox-termos {
+.reset-form .checkbox-termos {
   display: flex;
   padding: 10px;
 }
+
 
 
 
@@ -362,38 +365,9 @@ footer a+a {
     margin-bottom: 30%;
   }
 
-  .register-form {
-    padding-right: 0px;
-  }
 
-  .register-form #name {
-    width: 80%;
-  }
 
-  .register-form #email {
-    width: 80%;
-  }
 
-  .register-form #phone {
-    width: 80%;
-  }
-
-  .register-form #password {
-    width: 80%;
-  }
-
-  .register-form #repeat-password {
-    width: 80%;
-  }
-
-  .register-form .buttons {
-    justify-content: start;
-  }
-
-  .register-form .buttons button {
-    margin-left: 10px;
-    margin-right: 10px;
-  }
 
   .menu-btn {
     display: flex;
@@ -590,4 +564,7 @@ footer a+a {
   .menu-acessibilidade h3 {
     font-size: 22px;
   }
+
+
+
 }

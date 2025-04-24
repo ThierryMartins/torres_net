@@ -15,20 +15,21 @@
 <body>
     <!-- Header section -->
     <header class="header">
+
         <input type="checkbox" id="menu-toggle">
+
         <!-- Label que servirá como botão do menu hamburger -->
         <label for="menu-toggle" class="menu-btn">
             <span class="hamburger-line"></span>
             <span class="hamburger-line"></span>
             <span class="hamburger-line"></span>
         </label>
-
         <div class="menu">
             <img src="image/logo.png" alt="Logo">
             <nav class="nav-links">
                 <a href="index.html">Início</a>
                 <a href="planos.html">Planos</a>
-                <a href="https://sejaefi.com.br/efi-pay#gestao-de-cobrancas" target="_blank">Pagamentos</a>
+                <a href="https://sejaefi.com.br/efi-pay#gestao-de-cobrancas">Pagamentos</a>
                 <div class="buttons">
                     <a href="Login-Page.html" style="align-self: flex-start;">Entrar</a>
                     <a href="Register-Page.html" style="align-self: flex-end;">Registrar</a>
@@ -47,36 +48,36 @@
             </div>
         </div>
 
-        
+
         <div class="menu-acessibilidade" id="menu-acessibilidade">
             <h3>Ferramentas de Acessibilidade</h3>
             <button id="trocar_tema"><i class="fa-regular fa-moon"></i> Tema Escuro</button>
-            <button id="tema_contraste" ><i class="fa-solid fa-circle-half-stroke"></i>  Alto Contraste</button>
-            <button id="Tamanho_Fonte"><i class="fa fa-font fa-2x"></i>  Aumentar Texto</button>
-            <button id="link_sublinhado"><i class="fas fa-link"></i>  Links Sublinhados</button>
+            <button id="tema_contraste"><i class="fa-solid fa-circle-half-stroke"></i> Alto Contraste</button>
+            <button id="Tamanho_Fonte"><i class="fa fa-font fa-2x"></i> Aumentar Texto</button>
+            <button id="link_sublinhado"><i class="fas fa-link"></i> Links Sublinhados</button>
         </div>
 
     </section>
 
 
 
-    <section class="principal"><!--class="home"-->
+    <section class="principal">
         <div id="quem-somos">
-            <div class="ajuste"><!--style="max-width: 900px; margin: 0 auto; text-align: center;" -->
-                <h1 class="h1">Quem Somos?</h1> <!--style="font-size: 2rem;  margin-bottom: 1rem;" -->
-                <p class="p"><!-- style="font-size: 1.1rem;  line-height: 1.6;" -->
+            <div class="ajuste">
+                <h1 class="h1">Quem Somos?</h1>
+                <p class="p">
                     Somos a <strong>TorresNet</strong>, uma empresa consolidada no mercado há mais de <strong>8
                         anos</strong>, reconhecida pela excelência na prestação de serviços de internet e pelo nosso
                     <strong>atendimento de alta qualidade</strong>.
                 </p>
-                <p class="p"><!-- style="font-size: 1.1rem;  line-height: 1.6;" -->
+                <p class="p">
                     Atuamos com <strong>responsabilidade e comprometimento</strong>, sempre oferecendo <strong>soluções
                         eficientes</strong> e personalizadas para nossos clientes. Nossa cobertura abrange diversas
                     regiões de <strong>Salvador</strong>, como <strong>Sussuarana</strong>, <strong>Rio
                         Vermelho</strong> e <strong>Plataforma</strong>, além das cidades de <strong>Feira de
                         Santana</strong> e <strong>Madre de Deus</strong>.
                 </p>
-                <p class="p"><!-- style="font-size: 1.1rem;  line-height: 1.6;" -->
+                <p class="p">
                     Nosso objetivo é garantir uma <strong>conexão estável, rápida e segura</strong>, com foco total na
                     <strong>satisfação e fidelização</strong> dos nossos clientes.
                 </p>
@@ -88,16 +89,17 @@
     <footer>
         <img src="image/logo.png" alt="Logo da Torres Net">
         <div class="text-footer">
-          <p>Torres Net</p>
-          <p>12.345.678/0001-00</p>
+            <p>Torres Net</p>
+            <p>12.345.678/0001-00</p>
         </div>
         <div class="icons-footer">
-          <a href="https://www.instagram.com/torresfibranet?igsh=MTM2d2s3bHVhNHFnNg=="><i class="bi bi-instagram"></i></a>
-          <a
-            href="https://api.whatsapp.com/send?phone=557193306954&text=Olá,%20gostaria%20de%20tirar%20uma%20dúvida%20sobre%20os%20planos%20de%20internet."><i
-              class="bi bi-whatsapp"></i></a>
+            <a href="https://www.instagram.com/torresfibranet?igsh=MTM2d2s3bHVhNHFnNg=="><i
+                    class="bi bi-instagram"></i></a>
+            <a
+                href="https://api.whatsapp.com/send?phone=557193306954&text=Olá,%20gostaria%20de%20tirar%20uma%20dúvida%20sobre%20os%20planos%20de%20internet."><i
+                    class="bi bi-whatsapp"></i></a>
         </div>
-      </footer>
+    </footer>
 
     <!-- É preciso ser interno -->
     <script type="module">
@@ -115,7 +117,7 @@
                         <a href="#" id="logout">Sair</a>
                         <span title="Perfil">${user.name}</span>
                     `;
-                    // remove os botões entrar e registrar
+                // remove os botões entrar e registrar
                 const removerBotoes = nav.querySelector('.buttons');
                 if (removerBotoes) {
                     removerBotoes.remove();
@@ -130,7 +132,7 @@
         });
     </script>
     <script src="src/acessibilidade.js"></script>
-    
+
 </body>
 
 </html>
