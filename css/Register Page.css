@@ -292,7 +292,7 @@ footer a+a {
   }
   
 
-@media (max-width:673px){
+@media (max-width:480px){
 
     .main-content .logo img{
         width: 50%;
@@ -423,7 +423,7 @@ footer a+a {
   /* Menu de Acessibilidade */
   .button-acessibilidade {
     position: fixed;
-    top: 50%;
+    top: 20%;
     z-index: 1000;
     cursor: pointer;
   }
@@ -494,39 +494,84 @@ footer a+a {
   
   }
   
-  /* Media Queries para telas maiores */
-  @media (min-width: 768px) {
+/* Telas médias (481px a 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
 
-    .menu-acessibilidade {
-      width: 250px;
-      left: 0;
-      transform: translate(-100%, -50%);
-      top: 30%;
-    }
-    
-    .menu-acessibilidade.ativo {
-      transform: translate(40px, -50%);
-    }
-    
-    .button-acessibilidade {
-      bottom: auto;
-      transform: translateY(-50%);
-    }
+  .menu-acessibilidade {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    z-index: 3;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    height: auto;
+    max-height: 50vh;
+    align-items: center;
+    top: 50%;
+    width: 50%;
+    right: -5%;
+    margin-right: 90%;
+    transform: translate(-100%, -50%);
+    opacity: 0;
+    transition: opacity 300ms ease, transform 300ms ease;
+    pointer-events: none;
+    border: 2px solid #1964c7;
   }
 
-/*media quary para tela ainda maior*/
-@media (min-width:1200px) {
-  body {
-    font-size: 25px;
+  .menu-acessibilidade.ativo {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    pointer-events: auto;
   }
 
-  .register-form #name, .register-form #email, .register-form #phone,
-  .register-form #password, .register-form #repeat-password {
-    height: 25px;
-    width: 290px;
+  .menu-acessibilidade h3 {
+    font-size: 22px;
   }
 
-  .register-form > input::placeholder, .register-form .buttons button {
-    font-size: 20px;
+  .img-container {
+    margin-top: 100px;
   }
+
+}
+
+/* Telas grandes (769px a 1280px) */
+@media (min-width: 769px) and (max-width: 1280px) {
+.menu-acessibilidade {
+  width: 20%;
+  height: 50vh;
+  left: 0;
+  top: 20%;
+  transform: translateX(-100%);
+}
+
+.menu-acessibilidade.ativo {
+  transform: translateX(10px);
+}
+
+.img-container {
+  margin-top: 50px;
+}
+}
+
+/* Telas muito grandes (acima de 1281px) */
+@media (min-width: 1281px) {
+
+.main-content .logo img{
+  margin-top: 100px;
+  
+}
+.main-content{
+  margin-bottom: 100px;
+}
+
+.button-acessibilidade img {
+  margin-right: 50px;
+}
+
+.menu-acessibilidade {
+  margin-top: 10%;
+}
 }
