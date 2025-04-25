@@ -538,6 +538,10 @@ footer a+a {
   .img-container {
     margin-top: 100px;
   }
+
+  .container {
+    margin-bottom: 100px;
+  }
 }
 
 /* Telas grandes (769px a 1280px) */
@@ -556,6 +560,10 @@ footer a+a {
 
   .img-container {
     margin-top: 50px;
+  }
+
+  .container {
+    margin-bottom: 100px;
   }
 }
 

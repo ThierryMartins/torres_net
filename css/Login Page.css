@@ -108,6 +108,8 @@ body.more-letter .login-box button, body.more-letter .menu li a, body.more-lette
 
 
 .logo {
+    height: 200px;
+    /* width: 200px; */
     margin-bottom: 5px;
     align-items: center; /*alterado vitor araujo*/
 }
@@ -465,6 +467,10 @@ footer a+a {
     .img-container {
       margin-top: 100px;
     }
+
+    .logo {
+      margin-top: 50px;
+    }
   
   }
   
@@ -482,9 +488,17 @@ footer a+a {
     transform: translateX(10px);
   }
 
-  .img-container {
+  /* .img-container {
     margin-top: 50px;
+  } */
+
+  .logo {
+    margin-top: 80px;
   }
+
+  /* .login-box {
+    margin-bottom: 50px;
+  } */
 }
 
 /* Telas muito grandes (acima de 1281px) */
