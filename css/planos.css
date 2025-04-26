@@ -101,10 +101,12 @@ body.more-letter .plan-card button {
   padding-left: 15px;
   padding-right: 15px;
   padding-bottom: 5px;
+  transition: all 0.2 ease-in-out;
 }
 
 .header .buttons>a:hover {
   background-color: #22b9ff;
+  transform: scale(1.2);
 }
 
 /* main */
@@ -240,68 +242,6 @@ footer a+a {
 }
 
 
-.button-acessibilidade {
-  position: fixed;
-  right: 20px;
-  top: 15%;
-  z-index: 4;
-  cursor: pointer;
-}
-
-.button-acessibilidade img {
-  width: 60px;
-  height: 60px;
-
-}
-
-.menu-acessibilidade {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: fixed;
-  background-color: #fff;
-  padding: 15px;
-  border-radius: 8px;
-  z-index: 3;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  height: 25vh;
-  width: 15%;
-  align-items: center;
-  left: -40%;
-  text-align: center;
-  /* Posição inicial (fora da tela) */
-  opacity: 0;
-  transform: translateX(-100%);
-  transition: opacity 300ms ease, transform 300ms ease;
-  pointer-events: none;
-  border: 2px solid #1964c7;
-}
-
-
-.menu-acessibilidade.ativo {
-  opacity: 1;
-  transform: translateX(40px);
-  pointer-events: auto;
-}
-
-.menu-acessibilidade button {
-  display: block;
-  background: none;
-  border: none;
-  color: black;
-  margin: 10px auto;
-  font-size: 20px;
-  cursor: pointer;
-  text-align: center;
-}
-
-.menu-acessibilidade h3 {
-  color: black;
-}
-
-.menu-acessibilidade button:hover {
-  text-decoration: underline;
-}
 
 
 @media (max-width:480px) {
@@ -418,107 +358,13 @@ footer a+a {
     transform: scale(1.1);
   }
 
-  .menu-acessibilidade {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    background-color: white;
-    padding: 15px;
-    border-radius: 8px;
-    z-index: 999;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    height: auto;
-    /* Altura automática */
-    max-height: 70vh;
-    /* Limite máximo */
-    width: 90%;
-    /* Largura maior em mobile */
-    max-width: 300px;
-    /* Largura máxima em desktop */
-    align-items: center;
-    left: 0;
-    top: 50%;
-    transform: translate(-100%, -100%);
-    /* Centraliza verticalmente e esconde */
-    opacity: 0;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    pointer-events: none;
-    overflow-y: auto;
-    /* Scroll se necessário */
-  }
-
-  .menu-acessibilidade.ativo {
-    transform: translate(10px, -30%);
-    /* Aparece à direita */
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  /* Botões do menu */
-  .menu-acessibilidade button {
-    background: none;
-    border: none;
-    color: black;
-    margin: 10px 0;
-    font-size: 16px;
-    cursor: pointer;
-    width: 100%;
-    padding: 10px;
-    border-radius: 4px;
-    transition: background-color 0.2s;
-  }
-
-  .menu-acessibilidade button:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
-
-  /* Título do menu */
-  .menu-acessibilidade h3 {
-    color: black;
-    margin-bottom: 15px;
-    font-size: 18px;
-    text-align: center;
-  }
+  
 
 
 }
 
   /* Telas médias (481px a 768px) */
   @media (min-width: 481px) and (max-width: 768px) {
-    .menu-acessibilidade {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      position: fixed;
-      background-color: #fff;
-      padding: 15px;
-      border-radius: 8px;
-      z-index: 3;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-      height: auto;
-      max-height: 50vh;
-      align-items: center;
-      top: 50%;
-      width: 50%;
-      right: 0%;
-      margin-right: 90%;
-      transform: translate(-100%, -50%);
-      opacity: 0;
-      transition: opacity 300ms ease, transform 300ms ease;
-      pointer-events: none;
-      border: 2px solid #1964c7;
-    }
-  
-    .menu-acessibilidade.ativo {
-      transform: translate(-50%, -50%);
-      opacity: 1;
-      pointer-events: auto;
-    }
-  
-    .menu-acessibilidade h3 {
-      font-size: 22px;
-    }
-  
     .img-container {
       margin-top: 100px;
     }
@@ -526,17 +372,7 @@ footer a+a {
   
   /* Telas grandes (769px a 1280px) */
   @media (min-width: 769px) and (max-width: 1280px) {
-    .menu-acessibilidade {
-      width: 35%;
-      height: 29vh;
-      left: 0;
-      top: 20%;
-      transform: translateX(-100%);
-    }
-  
-    .menu-acessibilidade.ativo {
-      transform: translateX(10px);
-    }
+    
   
     .img-container {
       margin-top: 50px;
@@ -549,11 +385,5 @@ footer a+a {
       margin-top: 100px;
     }
   
-    .button-acessibilidade img {
-      margin-right: 50px;
-    }
   
-    .menu-acessibilidade {
-      margin-top: 10%;
-    }
   }
