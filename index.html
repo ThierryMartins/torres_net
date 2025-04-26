@@ -101,34 +101,34 @@
     </footer>
 
     <!-- É preciso ser interno -->
-    <script type="module">
-        import { getLoggedInUser } from './src/auth.js';
-
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const user = getLoggedInUser();
-
-            // Atualiza o header/nav para mostrar opções de logado
-            const nav = document.querySelector('nav');
-            if (nav) {
-                nav.innerHTML += `
-                        <a href="#" id="logout">Sair</a>
-                        <span title="Perfil">${user.name}</span>
-                    `;
-                // remove os botões entrar e registrar
-                const removerBotoes = nav.querySelector('.buttons');
-                if (removerBotoes) {
-                    removerBotoes.remove();
-                }
-
-                // adiciona evento ao clicar em sair
-                document.getElementById('logout').addEventListener('click', () => {
-                    localStorage.removeItem('currentUser');
-                    window.location.reload();
-                });
+<script type="module">
+    import { getLoggedInUser } from './src/auth.js';
+  
+  
+    document.addEventListener('DOMContentLoaded', () => {
+        const user = getLoggedInUser();
+  
+        // Atualiza o header/nav para mostrar opções de logado
+        const nav = document.querySelector('nav');
+        if (nav) {
+            nav.innerHTML += `
+                    <a href="#" id="logout">Sair</a>
+                    <span title="Perfil" style="color: white;">${user.name}</span>
+                `;
+            // remove os botões entrar e registrar
+            const removerBotoes = nav.querySelector('.buttons');
+            if (removerBotoes) {
+                removerBotoes.remove();
             }
-        });
-    </script>
+  
+            // adiciona evento ao clicar em sair
+            document.getElementById('logout').addEventListener('click', () => {
+                localStorage.removeItem('currentUser');
+                window.location.href = 'index.html'; 
+            });
+        }
+    });
+  </script>
     <script src="src/acessibilidade.js"></script>
 
 </body>

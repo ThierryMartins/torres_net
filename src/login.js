@@ -32,7 +32,7 @@ loginButton.addEventListener('click', () => {
 
         loginUser(email, password);
         alert('Login realizado com sucesso!');
-        window.location.href = 'index.html';
+        window.location.href = 'planos.html';
         
     } catch (error) {
         alert(error.message);
