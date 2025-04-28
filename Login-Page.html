@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desktop - Login Page</title>
-    <link rel="stylesheet" href="css/Login Page.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="css/acessibilidade.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desktop - Login Page</title>
+  <link rel="stylesheet" href="css/Login Page.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/acessibilidade.css">
 </head>
+
 <body>
-      <!-- Header section -->
+  <!-- Header -->
   <header class="header">
 
     <input type="checkbox" id="menu-toggle">
@@ -33,52 +35,53 @@
       </nav>
     </div>
   </header>
-    <!-- Main content section -->
-    <div class="main-content">
+  <!-- Main content -->
+  <main class="main-content">
 
-        <div class="button-acessibilidade" id="btn-acessibilidade">
-            <img src="image/icons8-acessibilidade-40.png" alt="Botão de Acessibilidade">
-        </div>
-
-        <div class="menu-acessibilidade" id="menu-acessibilidade">
-            <h3>Ferramentas de Acessibilidade</h3>
-            <button id="trocar_tema"><i class="fa-regular fa-moon"></i> Tema Escuro</button>
-            <button id="tema_contraste" ><i class="fa-solid fa-circle-half-stroke"></i>  Alto Contraste</button>
-            <button id="Tamanho_Fonte"><i class="fa fa-font fa-2x"></i>  Aumentar Texto</button>
-            <button id="link_sublinhado"><i class="fas fa-link"></i>  Links Sublinhados</button>
-        </div>
-
-
-        <img src="image/logo-large.png" alt="Large Logo" class="logo">
-        <div class="login-box">
-            <label for="email">Email</label>
-            <input type="text" id="email" placeholder="example123@dominio.com">
-            <label for="password">Password</label>
-            <input type="password" id="password" placeholder="Senha">
-            <div class="buttons">
-                <button>Cadastre-se</button>
-                <button>ENTRAR</button>
-            </div>
-            <a href="#">Esqueceu a senha?</a>
-        </div>
+    <div class="button-acessibilidade" id="btn-acessibilidade">
+      <img src="image/icons8-acessibilidade-40.png" alt="Botão de Acessibilidade">
     </div>
 
-    <!-- Footer section -->
-    <footer>
-        <img src="image/logo.png" alt="Logo da Torres Net">
-        <div class="text-footer">
-          <p>Torres Net</p>
-          <p>12.345.678/0001-00</p>
-        </div>
-        <div class="icons-footer">
-          <a href="https://www.instagram.com/torresfibranet?igsh=MTM2d2s3bHVhNHFnNg=="><i class="bi bi-instagram"></i></a>
-          <a
-            href="https://api.whatsapp.com/send?phone=557193306954&text=Olá,%20gostaria%20de%20tirar%20uma%20dúvida%20sobre%20os%20planos%20de%20internet."><i
-              class="bi bi-whatsapp"></i></a>
-        </div>
-      </footer>
-    <script src="src/login.js" type="module"></script>
-    <script src="src/acessibilidade.js"></script>
+    <div class="menu-acessibilidade" id="menu-acessibilidade">
+      <h3>Ferramentas de Acessibilidade</h3>
+      <button id="trocar_tema"><i class="fa-regular fa-moon"></i> Tema Escuro</button>
+      <button id="tema_contraste"><i class="fa-solid fa-circle-half-stroke"></i> Alto Contraste</button>
+      <button id="Tamanho_Fonte"><i class="fa fa-font fa-2x"></i> Aumentar Texto</button>
+      <button id="link_sublinhado"><i class="fas fa-link"></i> Links Sublinhados</button>
+    </div>
+
+
+    <img src="image/logo-large.png" alt="Large Logo" class="logo">
+    <div class="login-box">
+      <label for="email">Email</label>
+      <input type="text" id="email" placeholder="example123@dominio.com">
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Senha">
+      <div class="buttons">
+        <button>Cadastre-se</button>
+        <button>ENTRAR</button>
+      </div>
+      <a href="#">Esqueceu a senha?</a>
+    </div>
+  </main>
+
+  <!-- Footer section -->
+  <footer>
+    <img src="image/logo.png" alt="Logo da Torres Net">
+    <div class="text-footer">
+      <p>Torres Net</p>
+      <p>12.345.678/0001-00</p>
+    </div>
+    <div class="icons-footer">
+      <a href="https://www.instagram.com/torresfibranet?igsh=MTM2d2s3bHVhNHFnNg=="><i class="bi bi-instagram"></i></a>
+      <a
+        href="https://api.whatsapp.com/send?phone=557193306954&text=Olá,%20gostaria%20de%20tirar%20uma%20dúvida%20sobre%20os%20planos%20de%20internet."><i
+          class="bi bi-whatsapp"></i></a>
+    </div>
+  </footer>
+  <script src="src/login.js" type="module"></script>
+  <script src="src/acessibilidade.js"></script>
 
 </body>
+
 </html>

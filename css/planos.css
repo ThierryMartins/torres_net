@@ -163,17 +163,20 @@ body.more-letter .plan-card button {
 /* Botão */
 .plan-card button {
   margin-top: auto;
-  background-color: #00cfff;
-  color: #000;
+  background-color: #1b6ca8;
+  color: black;
   border: none;
   padding: 0.75rem;
   border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
+  transition: all 0.2s ease-in-out;
 }
 
 .plan-card button:hover {
   background-color: #00b8e6;
+  scale: 1.05;
+  transition: all 0.2s ease-in-out;
 }
 
 .plan-card a {

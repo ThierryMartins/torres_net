@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <!-- Header section -->
+    <!-- Header -->
     <header class="header">
 
         <input type="checkbox" id="menu-toggle">
@@ -38,53 +38,56 @@
         </div>
     </header>
 
-    <!-- Main content section -->
-    <section class="img-familia">
-        <img id="familia" src="image/banner.png" alt="banner com imagem de uma familia feliz com internet">
-        <div id="escala">
-            <div class="button-acessibilidade" id="btn-acessibilidade">
-                <img id="teste" src="image/icons8-acessibilidade-40.png" alt="Botão de Acessibilidade">
+    <!-- Main content-->
+    <main>
+        <section class="img-familia">
+            <img id="familia" src="image/banner.png" alt="banner com imagem de uma familia feliz com internet">
+            <div id="escala">
+                <div class="button-acessibilidade" id="btn-acessibilidade">
+                    <img id="teste" src="image/icons8-acessibilidade-40.png" alt="Botão de Acessibilidade">
+                </div>
             </div>
-        </div>
 
 
-        <div class="menu-acessibilidade" id="menu-acessibilidade">
-            <h3>Ferramentas de Acessibilidade</h3>
-            <button id="trocar_tema"><i class="fa-regular fa-moon"></i> Tema Escuro</button>
-            <button id="tema_contraste"><i class="fa-solid fa-circle-half-stroke"></i> Alto Contraste</button>
-            <button id="Tamanho_Fonte"><i class="fa fa-font fa-2x"></i> Aumentar Texto</button>
-            <button id="link_sublinhado"><i class="fas fa-link"></i> Links Sublinhados</button>
-        </div>
-
-    </section>
-
-
-
-    <section class="principal">
-        <div id="quem-somos">
-            <div class="ajuste">
-                <h1 class="h1">Quem Somos?</h1>
-                <p class="p">
-                    Somos a <strong>TorresNet</strong>, uma empresa consolidada no mercado há mais de <strong>8
-                        anos</strong>, reconhecida pela excelência na prestação de serviços de internet e pelo nosso
-                    <strong>atendimento de alta qualidade</strong>.
-                </p>
-                <p class="p">
-                    Atuamos com <strong>responsabilidade e comprometimento</strong>, sempre oferecendo <strong>soluções
-                        eficientes</strong> e personalizadas para nossos clientes. Nossa cobertura abrange diversas
-                    regiões de <strong>Salvador</strong>, como <strong>Sussuarana</strong>, <strong>Rio
-                        Vermelho</strong> e <strong>Plataforma</strong>, além das cidades de <strong>Feira de
-                        Santana</strong> e <strong>Madre de Deus</strong>.
-                </p>
-                <p class="p">
-                    Nosso objetivo é garantir uma <strong>conexão estável, rápida e segura</strong>, com foco total na
-                    <strong>satisfação e fidelização</strong> dos nossos clientes.
-                </p>
+            <div class="menu-acessibilidade" id="menu-acessibilidade">
+                <h3>Ferramentas de Acessibilidade</h3>
+                <button id="trocar_tema"><i class="fa-regular fa-moon"></i> Tema Escuro</button>
+                <button id="tema_contraste"><i class="fa-solid fa-circle-half-stroke"></i> Alto Contraste</button>
+                <button id="Tamanho_Fonte"><i class="fa fa-font fa-2x"></i> Aumentar Texto</button>
+                <button id="link_sublinhado"><i class="fas fa-link"></i> Links Sublinhados</button>
             </div>
-        </div>
-    </section>
 
-    <!-- Footer section -->
+        </section>
+
+
+
+        <section class="principal">
+            <div id="quem-somos">
+                <div class="ajuste">
+                    <h1 class="h1">Quem Somos?</h1>
+                    <p class="p">
+                        Somos a <strong>TorresNet</strong>, uma empresa consolidada no mercado há mais de <strong>8
+                            anos</strong>, reconhecida pela excelência na prestação de serviços de internet e pelo nosso
+                        <strong>atendimento de alta qualidade</strong>.
+                    </p>
+                    <p class="p">
+                        Atuamos com <strong>responsabilidade e comprometimento</strong>, sempre oferecendo
+                        <strong>soluções
+                            eficientes</strong> e personalizadas para nossos clientes. Nossa cobertura abrange diversas
+                        regiões de <strong>Salvador</strong>, como <strong>Sussuarana</strong>, <strong>Rio
+                            Vermelho</strong> e <strong>Plataforma</strong>, além das cidades de <strong>Feira de
+                            Santana</strong> e <strong>Madre de Deus</strong>.
+                    </p>
+                    <p class="p">
+                        Nosso objetivo é garantir uma <strong>conexão estável, rápida e segura</strong>, com foco total
+                        na
+                        <strong>satisfação e fidelização</strong> dos nossos clientes.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
     <footer>
         <img src="image/logo.png" alt="Logo da Torres Net">
         <div class="text-footer">
@@ -101,34 +104,34 @@
     </footer>
 
     <!-- É preciso ser interno -->
-<script type="module">
-    import { getLoggedInUser } from './src/auth.js';
-  
-  
-    document.addEventListener('DOMContentLoaded', () => {
-        const user = getLoggedInUser();
-  
-        // Atualiza o header/nav para mostrar opções de logado
-        const nav = document.querySelector('nav');
-        if (nav) {
-            nav.innerHTML += `
+    <script type="module">
+        import { getLoggedInUser } from './src/auth.js';
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const user = getLoggedInUser();
+
+            // Atualiza o header/nav para mostrar opções de logado
+            const nav = document.querySelector('nav');
+            if (nav) {
+                nav.innerHTML += `
                     <a href="#" id="logout">Sair</a>
                     <span title="Perfil" style="color: white;">${user.name}</span>
                 `;
-            // remove os botões entrar e registrar
-            const removerBotoes = nav.querySelector('.buttons');
-            if (removerBotoes) {
-                removerBotoes.remove();
+                // remove os botões entrar e registrar
+                const removerBotoes = nav.querySelector('.buttons');
+                if (removerBotoes) {
+                    removerBotoes.remove();
+                }
+
+                // adiciona evento ao clicar em sair
+                document.getElementById('logout').addEventListener('click', () => {
+                    localStorage.removeItem('currentUser');
+                    window.location.href = 'index.html';
+                });
             }
-  
-            // adiciona evento ao clicar em sair
-            document.getElementById('logout').addEventListener('click', () => {
-                localStorage.removeItem('currentUser');
-                window.location.href = 'index.html'; 
-            });
-        }
-    });
-  </script>
+        });
+    </script>
     <script src="src/acessibilidade.js"></script>
 
 </body>
