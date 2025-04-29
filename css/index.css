@@ -149,7 +149,7 @@ body.dark .header .menu{
 }
 
 .ajuste {
-    background-color: #122539; /* rgba(0, 0, 0, 0.5); Fundo preto com transparência */
+    background-color: #1b6ca8; /* rgba(0, 0, 0, 0.5); Fundo preto com transparência */
     padding: 20px;
     border-radius: 10px;
     color: white;
@@ -251,6 +251,7 @@ footer a+a {
      opacity: 1;
      transform: translateX(40px);
      pointer-events: auto;
+     transform: scale(1.2);
    }
    
    .menu-acessibilidade button{
