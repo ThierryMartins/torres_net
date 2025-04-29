@@ -439,6 +439,15 @@ footer a+a {
     margin-top: 50px;
   }
 
+  .logo {
+    
+    margin-top: 50%;
+  }
+
+  footer{
+    margin-top: 60%;
+  }
+
 }
 
 /* Telas muito grandes (acima de 1496px) */
