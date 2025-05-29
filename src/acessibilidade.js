@@ -52,10 +52,10 @@ document.getElementById('Tamanho_Fonte').addEventListener('click',
 document.getElementById('link_sublinhado').addEventListener('click',
   ()=>{
     document.body.classList.toggle('sublinhar')
-    if(document.body.classList.contains('more-letter')){
-      document.getElementById('sublinhar').innerHTML = '<i class="fas fa-link"></i>  Retirar Links Sublinhados'
+    if(document.body.classList.contains('sublinhar')){
+      document.getElementById('link_sublinhado').innerHTML = '<i class="fas fa-link"></i>  Retirar Links Sublinhados'
     }else{
-      document.getElementById('sublinhar').innerHTML = '<i class="fas fa-link"></i>  Links Sublinhados'
-    }
-  }
+      document.getElementById('link_sublinhado').innerHTML = '<i class="fas fa-link"></i>  Links Sublinhados'
+    }
+  }
 )
