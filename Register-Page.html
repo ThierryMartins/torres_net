@@ -48,14 +48,14 @@
         <div class="menu-acessibilidade" id="menu-acessibilidade">
             <h3>Ferramentas de Acessibilidade</h3>
             <button id="trocar_tema"><i class="fa-regular fa-moon"></i> Tema Escuro</button>
-            <button id="tema_contraste" ><i class="fa-solid fa-circle-half-stroke"></i>  Alto Contraste</button>
-            <button id="Tamanho_Fonte"><i class="fa fa-font fa-2x"></i>  Aumentar Texto</button>
-            <button id="link_sublinhado"><i class="fas fa-link"></i>  Links Sublinhados</button>
+            <button id="tema_contraste"><i class="fa-solid fa-circle-half-stroke"></i> Alto Contraste</button>
+            <button id="Tamanho_Fonte"><i class="fa fa-font fa-2x"></i> Aumentar Texto</button>
+            <button id="link_sublinhado"><i class="fas fa-link"></i> Links Sublinhados</button>
         </div>
         <div class="logo">
             <img src="image/logo-large.png" alt="Logo">
         </div>
-        
+
         <div id="general-error" class="general-error"></div>
         <div class="register-form">
             <label for="name">Nome Completo</label>
@@ -77,7 +77,18 @@
             <label for="repeat-password">Repita a senha</label>
             <input type="password" id="repeat-password" placeholder="Repita a senha">
             <div id="repeat-password-error" class="error-message"></div>
-            
+
+            <div class="checklist-caracteristicas-senha">
+                <ul>
+                    <li id="senha-min-caracteres"><i class="fa-regular fa-circle"></i> Pelo menos 8 caracteres</li>
+                    <li id="senha-maiuscula"><i class="fa-regular fa-circle"></i> Pelo menos 1 letra maiúscula</li>
+                    <li id="senha-minuscula"><i class="fa-regular fa-circle"></i> Pelo menos 1 letra minúscula</li>
+                    <li id="senha-numero"><i class="fa-regular fa-circle"></i> Pelo menos 1 número</li>
+                    <li id="senha-especial"><i class="fa-regular fa-circle"></i> Pelo menos 1 caractere especial</li>
+                </ul>
+
+            </div>
+
             <div class="checkbox-termos">
                 <input type="checkbox" id="terms">
                 <label for="terms">Concordo com os Termos</label>
@@ -93,19 +104,20 @@
     <footer>
         <img src="image/logo.png" alt="Logo da Torres Net">
         <div class="text-footer">
-          <p>Torres Net</p>
-          <p>12.345.678/0001-00</p>
+            <p>Torres Net</p>
+            <p>12.345.678/0001-00</p>
         </div>
         <div class="icons-footer">
-          <a href="https://www.instagram.com/torresfibranet?igsh=MTM2d2s3bHVhNHFnNg=="><i class="bi bi-instagram"></i></a>
-          <a
-            href="https://api.whatsapp.com/send?phone=557193306954&text=Olá,%20gostaria%20de%20tirar%20uma%20dúvida%20sobre%20os%20planos%20de%20internet."><i
-              class="bi bi-whatsapp"></i></a>
+            <a href="https://www.instagram.com/torresfibranet?igsh=MTM2d2s3bHVhNHFnNg=="><i
+                    class="bi bi-instagram"></i></a>
+            <a
+                href="https://api.whatsapp.com/send?phone=557193306954&text=Olá,%20gostaria%20de%20tirar%20uma%20dúvida%20sobre%20os%20planos%20de%20internet."><i
+                    class="bi bi-whatsapp"></i></a>
         </div>
-    
+
     </footer>
 </body>
 <script src="src/register.js" type="module"></script>
 <script src="src/acessibilidade.js"></script>
-</html>
 
+</html>
