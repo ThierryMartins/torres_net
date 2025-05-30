@@ -99,6 +99,22 @@ function validatePassword(password) {
     return true;
 }
 
+function validateCaracteres () {
+
+    const senha = document.getElementById("password").value;
+    document.getElementById('senha-min-caracteres').querySelector('i').className =
+        senha.length >= 8 ? 'fa-solid fa-circle-check' : 'fa-regular fa-circle';
+    document.getElementById('senha-maiuscula').querySelector('i').className =
+        /[A-Z]/.test(senha) ? 'fa-solid fa-circle-check' : 'fa-regular fa-circle';
+    document.getElementById('senha-minuscula').querySelector('i').className =
+        /[a-z]/.test(senha) ? 'fa-solid fa-circle-check' : 'fa-regular fa-circle';
+    document.getElementById('senha-numero').querySelector('i').className =
+        /\d/.test(senha) ? 'fa-solid fa-circle-check' : 'fa-regular fa-circle';
+    document.getElementById('senha-especial').querySelector('i').className =
+        /[^A-Za-z0-9]/.test(senha) ? 'fa-solid fa-circle-check' : 'fa-regular fa-circle';
+
+}
+
 function showError(inputElement, errorElement, message) {
     inputElement.classList.add('input-error');
     errorElement.textContent = message;
@@ -106,10 +122,12 @@ function showError(inputElement, errorElement, message) {
     inputElement.focus();
 }
 
-// Event listeners
+
 alreadyHaveAccountButton.addEventListener('click', () => {
     window.location.href = 'Login-Page.html';
 });
+
+passwordInput.addEventListener('input', validateCaracteres);
 
 registerButton.addEventListener('click', () => {
     try {
